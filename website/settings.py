@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 import django_heroku
 import dj_database_url
@@ -110,11 +109,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
 STATIC_URL = 'affiliate/static/'
 
-MEDIA_URL = STATIC_ROOT / 'media/'
+MEDIA_URL = 'staticfiles/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -126,7 +123,7 @@ STATICFILES_DIRS = [
 
 ]
 
-MEDIA_ROOT = BASE_DIR / STATIC_URL / MEDIA_URL
+MEDIA_ROOT = BASE_DIR / MEDIA_URL
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
