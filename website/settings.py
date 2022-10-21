@@ -113,7 +113,7 @@ STATIC_ROOT = str(BASE_DIR / 'staticfiles')
 
 STATIC_URL = 'affiliate/static/'
 
-MEDIA_URL = STATIC_ROOT / 'media/'
+MEDIA_URL = str(STATIC_ROOT / 'media/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
